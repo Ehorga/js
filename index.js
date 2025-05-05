@@ -1,26 +1,20 @@
-const author = "King";
-const bookTitle = "It";
-const pageCount = 1246;
-// alert(
-//   'My favorite book :\n "' +
-//     bookTitle +
-//     '" by  ' +
-//     author +
-//     " (" +
-//     pageCount +
-//     " pages )"
-// );
-const product = "Laptop";
-const price = 57000;
-const amount = 3;
-const cost = price * amount;
-// alert("The cost of " + amount + ' items "' + product + '" is ' + cost + " UAH");
-// const userName = prompt("enter your name");
-// const city = prompt("enter city");
-// alert("hi, " + userName + "! Nice day :) Welcome in " + city +"!");
-// const task1 = prompt("enter first task");
-// const task2 = prompt("enter second task");
-// alert("My plans for day:\n1) " + task1 + " \n2) " + task2)
-const isWinOscar = false;
-const isRainy = true;
-const isPasportReady = true;
+// const wantedGift = prompt("Який ви хочете подарунок на день народження? ");
+// const isYouSure = confirm("Чи впевнений ти, що хочеш саме " + wantedGift + '?');
+
+// if (isYouSure) {
+//     alert("Гарний вибір! Піду шукати тобі " + wantedGift + " до дня народження!");
+// } else {
+//     prompt("А ну давай по-впевненіше: ");
+// }
+if (confirm('USD to UAH?')) {
+    let summUSD = prompt('Summa (USD): ');
+    let courseUAH = prompt('Course (UAH): ');
+    let result = summUSD * courseUAH;
+    alert('It is ' + result + ' UAH');
+} else {
+    let summUAH = prompt('Summa (UAH): ');
+    let courseUSD = prompt('Course (USD): ');
+    let converted = summUAH / courseUSD;
+    alert('It is ' + converted + ' USD');
+}
+
