@@ -1,20 +1,22 @@
-// const wantedGift = prompt("Який ви хочете подарунок на день народження? ");
-// const isYouSure = confirm("Чи впевнений ти, що хочеш саме " + wantedGift + '?');
+// const length = prompt("Введіть довжину прямокутника:");
+// const width = prompt("Введіть ширину прямокутника:");
+// const conf = confirm("Обчислити площу?");
+// if (conf) {
+//   const area = length * width;
 
-// if (isYouSure) {
-//     alert("Гарний вибір! Піду шукати тобі " + wantedGift + " до дня народження!");
+//   alert("Площа: " + area);
 // } else {
-//     prompt("А ну давай по-впевненіше: ");
+//   alert("Розрахунок скасовано.");
 // }
-if (confirm('USD to UAH?')) {
-    let summUSD = prompt('Summa (USD): ');
-    let courseUAH = prompt('Course (UAH): ');
-    let result = summUSD * courseUAH;
-    alert('It is ' + result + ' UAH');
-} else {
-    let summUAH = prompt('Summa (UAH): ');
-    let courseUSD = prompt('Course (USD): ');
-    let converted = summUAH / courseUSD;
-    alert('It is ' + converted + ' USD');
+
+let r = prompt("Введіть радіус кола:");
+
+if (confirm("Обчислити площу та довжину кола?")) {
+    let area = 3.14 * r * r;
+    let circumference = 2 * 3.14 * r;
+    alert("Площа: " + area + "\nДовжина кола: " + circumference);
 }
+else {
+      alert("Розрахунок скасовано.");
+    }
 
