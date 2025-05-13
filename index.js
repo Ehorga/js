@@ -1,22 +1,22 @@
-// const length = prompt("Введіть довжину прямокутника:");
-// const width = prompt("Введіть ширину прямокутника:");
-// const conf = confirm("Обчислити площу?");
-// if (conf) {
-//   const area = length * width;
+const num1 = 5;
+const num2 = 8;
+const num3 = 8;
 
-//   alert("Площа: " + area);
-// } else {
-//   alert("Розрахунок скасовано.");
-// }
+const str1 = '5';
+const str2 = 'cat';
+const str3 = 'dog';
 
-let r = prompt("Введіть радіус кола:");
+console.log(num1 > num2);  
+console.log(num1 < num2);   
 
-if (confirm("Обчислити площу та довжину кола?")) {
-    let area = 3.14 * r * r;
-    let circumference = 2 * 3.14 * r;
-    alert("Площа: " + area + "\nДовжина кола: " + circumference);
-}
-else {
-      alert("Розрахунок скасовано.");
-    }
+console.log(num1 >= num2);  
+console.log(num1 <= num2); 
 
+console.log(num3 >= num2);  
+console.log(num3 <= num2);  
+
+console.log(num1 == num2); 
+console.log(num3 == num2); 
+
+console.log(num1 != num2);  
+console.log(num3 != num2);  
