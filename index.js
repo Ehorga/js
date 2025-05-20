@@ -1,17 +1,64 @@
-
-
-const userInput1 = prompt('Enter number 1');
-const userInput2 = prompt('Enter number 2');
-
-const number1 = Number(userInput1);
-const number2 = Number(userInput2);
-
-if (number1 > 0 && number2 > 0) {
-    alert('Обидва числа позитивні');
-} else if (number1 < 0 && number2 < 0) {
-    alert('Обидва числа негативні');
-} else if ((number1 > 0 && number2 < 0) || (number1 < 0 && number2 > 0)) {
-    alert('Числа різні за знаком');
+// const inputNumber = prompt("enter number");
+// const number = Number(inputNumber);
+// if (!(number%2)) {
+//     console.log("парне")
+// } else {
+//     console.log("не парне")
+// }
+// if (number%2 === 0) {
+//     console.log("парне")
+// } else {
+//     console.log("не парне")
+// }
+// number%2 === 0?console.log("парне"):console.log("не парне")
+// const answer = number%2 === 0?"парне":"не парне"
+// console.log(answer)
+// if (number % 3 === 0 || number % 4 === 0) {
+//   console.log("win");
+// } else {
+//   console.log("lose");
+// }
+// const answer = number % 3 === 0 || number % 4 === 0 ? "win" : "lose";
+// console.log(answer);
+// if (number === 0) {
+//     console.log("zero")
+// }
+// else if( number < 0){
+//  console.log("negative")
+// }
+// else{
+//     console.log("positive")
+// }
+// if (!number) {
+//     console.log("zero")
+// }
+// else if( number < 0){
+//  console.log("negative")
+// }
+// else{
+//     console.log("positive")
+// }
+// if (number % 2 === 0 && number % 7 === 0) {
+//   console.log("win");
+// } else {
+//   console.log("lose");
+// }
+//  console.log(number%2===0&&number%7===0?"win":"lose")
+const inputWord = prompt("enter word")
+if (inputWord) {
+    console.log("thank you")
 } else {
-    alert('Принаймні одне з чисел — нуль');
+   console.log(":(") 
 }
+if (!inputWord) {
+    console.log(":(")
+} else {
+   console.log("thank you") 
+}
+if (inputWord === "" || inputWord === null) {
+    console.log(":(")
+} else {
+   console.log("thank you") 
+}
+const answer = inputWord ===""||inputWord === null?":(":"thank you"
+console.log(answer);
