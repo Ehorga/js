@@ -10,7 +10,7 @@ if (number1 > 0 && number2 > 0) {
     alert('Обидва числа позитивні');
 } else if (number1 < 0 && number2 < 0) {
     alert('Обидва числа негативні');
-} else if ((number1 > 0 && number2 < 0) , (number1 < 0 && number2 > 0)) {
+} else if ((number1 > 0 && number2 < 0) || (number1 < 0 && number2 > 0)) {
     alert('Числа різні за знаком');
 } else {
     alert('Принаймні одне з чисел — нуль');
