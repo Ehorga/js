@@ -1,64 +1,34 @@
-// const inputNumber = prompt("enter number");
-// const number = Number(inputNumber);
-// if (!(number%2)) {
-//     console.log("парне")
+// 1)// const age = prompt("Введите ваш возраст:");
+// // const numericAge = Number(age);
+// // const message = numericAge >= 18 ? "Вы совершеннолетний." : "Вы несовершеннолетний.";
+// // alert(message);
+// 2)const userAgeInput = prompt('Введіть ваш вік:');
+// const userAge = Number(userAgeInput);
+
+// if (userAge < 0) {
+//     alert('Некоректний вік');
+// } else if (userAge < 12) {
+//     alert('Дитина');
+// } else if (userAge < 18) {
+//     alert('Підліток');
+// } else if (userAge < 65) {
+//     alert('Дорослий');
 // } else {
-//     console.log("не парне")
+//     alert('Старший');
 // }
-// if (number%2 === 0) {
-//     console.log("парне")
+// 3)const userHourInput = prompt('Котра година?');
+// const userHour = Number(userHourInput);
+
+// if (userHour < 0 || userHour >= 24) {
+//     alert('Не буває такої години');
+// } else if (userHour < 5) {
+//     alert('Доброї ночі');
+// } else if (userHour < 12) {
+//     alert('Доброго ранку');
+// } else if (userHour < 18) {
+//     alert('Доброго дня');
+// } else if (userHour < 22) {
+//     alert('Доброго вечора');
 // } else {
-//     console.log("не парне")
+//     alert('Доброї ночі');
 // }
-// number%2 === 0?console.log("парне"):console.log("не парне")
-// const answer = number%2 === 0?"парне":"не парне"
-// console.log(answer)
-// if (number % 3 === 0 || number % 4 === 0) {
-//   console.log("win");
-// } else {
-//   console.log("lose");
-// }
-// const answer = number % 3 === 0 || number % 4 === 0 ? "win" : "lose";
-// console.log(answer);
-// if (number === 0) {
-//     console.log("zero")
-// }
-// else if( number < 0){
-//  console.log("negative")
-// }
-// else{
-//     console.log("positive")
-// }
-// if (!number) {
-//     console.log("zero")
-// }
-// else if( number < 0){
-//  console.log("negative")
-// }
-// else{
-//     console.log("positive")
-// }
-// if (number % 2 === 0 && number % 7 === 0) {
-//   console.log("win");
-// } else {
-//   console.log("lose");
-// }
-//  console.log(number%2===0&&number%7===0?"win":"lose")
-const inputWord = prompt("enter word")
-if (inputWord) {
-    console.log("thank you")
-} else {
-   console.log(":(") 
-}
-if (!inputWord) {
-    console.log(":(")
-} else {
-   console.log("thank you") 
-}
-if (inputWord === "" || inputWord === null) {
-    console.log(":(")
-} else {
-   console.log("thank you") 
-}
-const answer = inputWord ===""||inputWord === null?":(":"thank you"
-console.log(answer);
