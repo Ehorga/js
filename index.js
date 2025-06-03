@@ -1,17 +1,23 @@
-// for (let i = 0; i < 5; i++) {
-//     console.log(i);
-// }
-// const password = '123qwe';
-// const maxTry = 3;
+const start = 15;
+const end = 20;
+const secretNumber = 17;
 
-// for (let i = 0; i < maxTry; i++) {
-//     const userInputPass = prompt('Enter password');
+for (let i = start; i <= end; i++) {
+    if (i === secretNumber) {
+        continue; 
+    }
+    console.log(i);
+}
+while (true) {
+    const userInput = prompt('Enter number');
 
-//     if (userInputPass === password) {
-//         alert('Welcome!');
-//         break; // выход из цикла при правильном пароле
-//     }
+    if (userInput === null) {
+        alert('Будь уважний!');
+        continue; 
+    }
 
-//     alert('У вас лишилося ще ' + (maxTry - 1 - i) + ' спроби');
-// }
-
+    if (Number(userInput) === secretNumber) {
+        alert('Win!');
+        break; 
+    }
+}
