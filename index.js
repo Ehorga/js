@@ -1,15 +1,18 @@
-// function isCenturyYear(year = 2024) {
-//     return year % 100 === 0;
-// }
+// object
 
+const firstNameUser = 'Brad';
+const lastNameUser = 'Pitt';
+const ageUser = 32;
 
+/**
+ * @param {string} fname - имя пользователя
+ * @param {string} lname - фамилия пользователя
+ * @param {number} age - возраст пользователя
+ */
+function logInfo(fname, lname, age) {
+  console.log(
+    `${fname} ${lname}, ${age}`
+  );
+}
 
-// function getTriangleArea(base, height) {
-//     return (base * height) / 2;
-// }
-// console.log(getTriangleArea(10, 5));
-
-// function celsiusToFahrenheitWrong(celsius) {
-//     return celsius * 33.8;
-// }
-// console.log(celsiusToFahrenheitWrong(1));
+logInfo(firstNameUser, lastNameUser, ageUser);
