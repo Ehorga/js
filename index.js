@@ -1,18 +1,15 @@
-// object
-
-const firstNameUser = 'Brad';
-const lastNameUser = 'Pitt';
-const ageUser = 32;
-
-/**
- * @param {string} fname - имя пользователя
- * @param {string} lname - фамилия пользователя
- * @param {number} age - возраст пользователя
- */
-function logInfo(fname, lname, age) {
-  console.log(
-    `${fname} ${lname}, ${age}`
-  );
+function Phone(brand, model, price) {
+  this.brand = brand;
+  this.price = price;
+  this.model = model;
+  this.getDetaiels = function() {
+    return `${this.brand}, ${this.model}, ${this.price}`;
+  };
 }
 
-logInfo(firstNameUser, lastNameUser, ageUser);
+
+const phone1 = new Phone('Google', 'mm', 51000);
+console.log(phone1.getDetaiels());
+
+const phone2 = new Phone('Sony', 'xp', 16000);
+console.log(phone2.getDetaiels());
