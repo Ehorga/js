@@ -1,21 +1,26 @@
-const dayOfWeek = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday"
-];
+const site = {
+  title: 'my site',
+  headers: ['qwe1', 'qwe2', 'qwe3'],
 
-const deleteDay1 = dayOfWeek.indexOf("Tuesday");
-dayOfWeek.splice(deleteDay1, 2, 'Friday');
+  showHeaders() {
+    this.headers.forEach(function(elem) {
+      console.log(elem);
+    });
+  },
 
-const deleteDay2 = dayOfWeek.indexOf("Monday");
-dayOfWeek.splice(deleteDay2, 1, 'Saturday');
+  showHeadersAndTitle() {
+    this.headers.forEach((elem) => {
+      console.log(elem, this.title);
+    });
+  },
 
-const deleteDay3 = dayOfWeek.indexOf("Thursday");
-dayOfWeek.splice(deleteDay3, 1);
+  showHeadersAndTitle2() {
+    this.headers.forEach(function(elem) {
+      console.log(elem, this.title);
+    });
+  }
+};
 
-console.log(dayOfWeek);
-console.log(dayOfWeek.indexOf("Thursday"));
+site.showHeaders();
+site.showHeadersAndTitle();
+site.showHeadersAndTitle2();
