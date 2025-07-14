@@ -1,14 +1,14 @@
-const numbers = [5, 10, 15, 20, 25, 30, 35];
-console.log(numbers);
+const str1 = 'cat and dog';
+console.log(str1);
+console.log(str1.length);
 
-// const lastNumber = numbers.pop();
-// numbers.unshift(lastNumber);
-// console.log(numbers);
+console.log(str1.includes('and'));
 
-// const firstElement = numbers.shift();
-// numbers.push(firstElement);
-// console.log(numbers);
+const firstLetter = str1.charAt(0);
+console.log(firstLetter);
 
-numbers.forEach(function(elem) {
-  console.log(elem);
-});
+const lastLetter = str1.at(-1);
+console.log(lastLetter);
+
+console.log(str1.indexOf('cat'));
+console.log(str1.lastIndexOf('cat'));
