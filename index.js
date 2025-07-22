@@ -1,14 +1,12 @@
-const number = 11111;
-console.log(number, typeof number);
+// rest
+function summa(...args) {
+  console.log(args); 
+  return args.reduce((accumulator, elem) => accumulator + elem, 0);
+}
 
-const numToStr = number.toString();
-console.log(numToStr, typeof numToStr);
+console.log(summa(1)); 
 
-const arrStr = numToStr.split('');
-console.log(arrStr, typeof arrStr);
+const numbers = [1, 5, 9, 3, 1];
 
-const arrNums = arrStr.map(elem => Number(elem));
-console.log(arrNums, typeof arrNums);
-
-const summa = arrNums.reduce((acc, elem) => acc + elem, 0);
-console.log(summa, typeof summa);
+// spread
+console.log(summa(...numbers)); 
