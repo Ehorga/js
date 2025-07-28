@@ -1,21 +1,15 @@
-const userInput = "enter something enter";
-console.log(userInput, userInput.length);
-const word1 =
-  userInput[0].toUpperCase() +
-  userInput.slice(1, -1).toLowerCase() +
-  userInput.at(-1).toUpperCase();
-console.log(word1);
-function checkSymbolInRow(str, symbol) {
-  return str.includes(symbol);
-}
+const dictionary = new Map();
+dictionary.set('copy', 'копіювати');
+dictionary.set('subscribe', 'підписатися');
+dictionary.set('send', 'відправити');
+dictionary.set('share', 'поділитися');
+dictionary.set('add to cart', 'додати в корзину');
+dictionary.set('zoom', 'збільшити');
+dictionary.set('play', 'грати');
 
-console.log(checkSymbolInRow(userInput, "o"));
-const countWord = userInput.split(" ").length;
-console.log(countWord);
-const arrayWord = userInput.split(" ");
-const object = {};
-for (let index = 0; index < arrayWord.length; index++) {
-  const element = arrayWord[index];
-  object[element] = element.length;
+const word = prompt('enter any word');
+if (dictionary.has(word)) {
+  console.log(dictionary.get(word));
+} else {
+  console.log(word);
 }
-console.log(object);
