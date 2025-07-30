@@ -1,0 +1,22 @@
+const movies = [
+  { id: 1, title: "Інтерстеллар", director: "Крістофер Нолан", year: 2014, duration: 169, genre: "Наукова фантастика" },
+  { id: 2, title: "Початок", director: "Крістофер Нолан", year: 2010, duration: 148, genre: "Трилер" },
+  { id: 3, title: "Втеча з Шоушенка", director: "Френк Дарабонт", year: 1994, duration: 142, genre: "Драма" },
+  { id: 4, title: "Форрест Гамп", director: "Роберт Земекіс", year: 1994, duration: 142, genre: "Драма" },
+  { id: 5, title: "Темний лицар", director: "Крістофер Нолан", year: 2008, duration: 152, genre: "Бойовик" },
+  { id: 6, title: "Матриця", director: "Вачовскі", year: 1999, duration: 136, genre: "Наукова фантастика" },
+  { id: 7, title: "Гладіатор", director: "Рідлі Скотт", year: 2000, duration: 155, genre: "Історичний" },
+  { id: 8, title: "Хрещений батько", director: "Френсіс Форд Коппола", year: 1972, duration: 175, genre: "Гангстерський" },
+  { id: 9, title: "Список Шиндлера", director: "Стівен Спілберг", year: 1993, duration: 195, genre: "Історичний" },
+  { id: 10, title: "Титанік", director: "Джеймс Камерон", year: 1997, duration: 195, genre: "Романтика" },
+  { id: 11, title: "Аватар", director: "Джеймс Камерон", year: 2009, duration: 162, genre: "Фантастика" },
+  { id: 12, title: "Сім", director: "Девід Фінчер", year: 1995, duration: 127, genre: "Трилер" },
+  { id: 13, title: "Бійцівський клуб", director: "Девід Фінчер", year: 1999, duration: 139, genre: "Драма" },
+  { id: 14, title: "Престиж", director: "Крістофер Нолан", year: 2006, duration: 130, genre: "Драма" },
+  { id: 15, title: "Коко", director: "Лі Анкріч", year: 2017, duration: 105, genre: "Анімація" },
+  { id: 16, title: "Ілюзія обману", director: "Луї Летер'є", year: 2013, duration: 115, genre: "Кримінал" },
+  { id: 17, title: "Джокер", director: "Тодд Філліпс", year: 2019, duration: 122, genre: "Драма" },
+  { id: 18, title: "Паразити", director: "Пон Чжун Хо", year: 2019, duration: 132, genre: "Трилер" },
+  { id: 19, title: "Зелена миля", director: "Френк Дарабонт", year: 1999, duration: 189, genre: "Драма" },
+  { id: 20, title: "Індіана Джонс: У пошуках втраченого ковчега", director: "Стівен Спілберг", year: 1981, duration: 115, genre: "Пригоди" }
+];
