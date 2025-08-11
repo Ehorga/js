@@ -1,28 +1,23 @@
-class Square {
-  #side;
-
-  constructor(side) {
-    this.#side = side;
-  }
-
-  set side(value) {
-    if (value <= 0) throw new Error("Сторона повинна бути додатним числом");
-    this.#side = value;
-  }
-
-  get side() {
-    return this.#side;
-  }
-
-  getArea() {
-    return this.#side ** 2;
-  }
+class User {
+    #login
+    constructor(login) {
+        this.login = login;
+    }
+    set login(value) {
+        if (typeof value !== 'string') throw new TypeError('type must be string');
+        if (value.trim().length < 3 || value.trim().length > 15) throw new RangeError('length 3..15');
+        this.#login = value;
+    }
+    get login() {
+        return this.#login;
+    }
 }
 
-const square = new Square(10);
-console.log(square.side);
-console.log(square.getArea());
+try {
+    const user = new User('Anna');
+    console.log(user);
+} catch (error) {
+    console.error(error);
+}
 
-square.side = 5;
-console.log(square.side);
-console.log(square.getArea());
+console.log('code');
