@@ -1,8 +1,9 @@
-const uniq = document.getElementById('uniq');
-uniq.style.backgroundColor = 'blue';
-uniq.style.color = 'white';
+const h2Block = document.querySelector('#block > h2');
+h2Block.style.color = 'white';
 
-const buttons = document.getElementsByClassName('btn');
-for (const btn of buttons) {
-  btn.style.display = 'block';
-}
+const btnsBlock = document.querySelectorAll('#block .btn');
+
+btnsBlock.forEach((btn) => {
+  btn.style.backgroundColor = 'yellow';
+  btn.style.fontSize = '16px';
+});
