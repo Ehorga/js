@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  gap: 15px;
+  padding-left: 0;
+}
+li {
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+li:hover {
+  background-color: rgb(28, 86, 89);
+}
+#flagBox {
+  text-align: center;
+  border: 3px solid black;
+  width: 320px;
+  height: 200px;
+  margin: auto;
+  line-height: 150px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.italy {
+  background-image: url(https://flagcdn.com/w320/it.jpg);
+}
+.japan {
+  background-image: url(https://flagcdn.com/w320/jp.jpg);
+}
+.usa {
+  background-image: url(https://flagcdn.com/w320/us.jpg);
+}
+.brazil {
+  background-image: url(https://flagcdn.com/w320/br.jpg);
+}
+.ukraine {
+  background-image: url(https://flagcdn.com/w320/ua.jpg);
+}

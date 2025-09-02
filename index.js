@@ -1,9 +1,13 @@
-const h2Block = document.querySelector('#block > h2');
-h2Block.style.color = 'white';
-
-const btnsBlock = document.querySelectorAll('#block .btn');
-
-btnsBlock.forEach((btn) => {
-  btn.style.backgroundColor = 'yellow';
-  btn.style.fontSize = '16px';
+const lis = document.querySelectorAll("#countries > li");
+const flagBox = document.getElementById("flagBox");
+const p = document.querySelector("#flagBox + p");
+p.style.textAlign = "center";
+p.style.textTransform = "uppercase"
+lis.forEach((li) => {
+  li.addEventListener("click", () => {
+    flagBox.className = "";
+    flagBox.textContent = "";
+    flagBox.classList.add(li.textContent);
+    p.textContent = li.textContent;
+  });
 });
