@@ -1,13 +1,26 @@
-const lis = document.querySelectorAll("#countries > li");
-const flagBox = document.getElementById("flagBox");
-const p = document.querySelector("#flagBox + p");
-p.style.textAlign = "center";
-p.style.textTransform = "uppercase"
-lis.forEach((li) => {
-  li.addEventListener("click", () => {
-    flagBox.className = "";
-    flagBox.textContent = "";
-    flagBox.classList.add(li.textContent);
-    p.textContent = li.textContent;
+const questions = document.querySelectorAll('#faq .faq-question');
+const answers = document.querySelectorAll('#faq .faq-answer');
+const pluses = document.querySelectorAll('#faq .faq-question span');
+
+questions.forEach((question) => {
+  question.addEventListener('click', () => {
+    const answerCurrent = question.nextElementSibling;
+    const plus = question.lastChild;
+    const isOpen = answerCurrent.classList.contains('open');
+
+    answers.forEach((answer) => {
+      answer.classList.remove('open');
+      answer.style.maxHeight = '0px';
+    });
+
+    pluses.forEach((pl) => {
+      pl.textContent = '+';
+    });
+
+    if (isOpen === false) {
+      plus.textContent = '−';
+      answerCurrent.classList.add('open');
+      answerCurrent.style.maxHeight = answerCurrent.scrollHeight + 'px';
+    }
   });
 });
