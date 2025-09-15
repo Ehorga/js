@@ -1,24 +1,11 @@
-const wrapper = document.getElementById('wrapper');
-const block = document.getElementById('block');
+const root = document.getElementById('root');
+const colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink"];
 
-let x = 0;
-let y = 0;
-const step = 10;
-
-window.addEventListener('keydown', (event) => {
-  if (event.key === 'ArrowLeft') {
-    x -= step;
-  }
-  if (event.key === 'ArrowRight') {
-    x += step;
-  }
-  if (event.key === 'ArrowUp') {
-    y -= step;
-  }
-  if (event.key === 'ArrowDown') {
-    y += step;
-  }
-
-  block.style.left = x + 'px';
-  block.style.top = y + 'px';
+const btns = colors.map(color => {
+  const btn = document.createElement('button');
+  btn.textContent = color;
+  btn.style.backgroundColor = color;
+  return btn;
 });
+
+root.append(...btns);
