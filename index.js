@@ -1,26 +1,24 @@
-const questions = document.querySelectorAll('#faq .faq-question');
-const answers = document.querySelectorAll('#faq .faq-answer');
-const pluses = document.querySelectorAll('#faq .faq-question span');
+const wrapper = document.getElementById('wrapper');
+const block = document.getElementById('block');
 
-questions.forEach((question) => {
-  question.addEventListener('click', () => {
-    const answerCurrent = question.nextElementSibling;
-    const plus = question.lastChild;
-    const isOpen = answerCurrent.classList.contains('open');
+let x = 0;
+let y = 0;
+const step = 10;
 
-    answers.forEach((answer) => {
-      answer.classList.remove('open');
-      answer.style.maxHeight = '0px';
-    });
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'ArrowLeft') {
+    x -= step;
+  }
+  if (event.key === 'ArrowRight') {
+    x += step;
+  }
+  if (event.key === 'ArrowUp') {
+    y -= step;
+  }
+  if (event.key === 'ArrowDown') {
+    y += step;
+  }
 
-    pluses.forEach((pl) => {
-      pl.textContent = '+';
-    });
-
-    if (isOpen === false) {
-      plus.textContent = '−';
-      answerCurrent.classList.add('open');
-      answerCurrent.style.maxHeight = answerCurrent.scrollHeight + 'px';
-    }
-  });
+  block.style.left = x + 'px';
+  block.style.top = y + 'px';
 });
