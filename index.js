@@ -1,16 +1,12 @@
-const root = document.getElementById('root');
+const [form] = document.forms;
 
-setTimeout(() => {
-  const subscribe = document.createElement('section');
-  const close = document.createElement('span');
-  close.textContent = 'X';
-  const h2 = document.createElement('h2');
-  h2.textContent = 'Subscribe to our email newsletter';
-  const form = document.createElement('form');
-  const input = document.createElement('input');
-  const button = document.createElement('button');
-  button.textContent = 'Subscribe';
-  form.append(input, button);
-  subscribe.append(close, h2, form);
-  root.append(subscribe);
-}, 5000);
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const login = form.elements.login.value.trim();
+    const password = form.elements.password.value.trim();
+    if (login.length >= 5 && password.length >= 8) {
+        form.submit();
+        return;
+    }
+    alert('enter login or password');
+});
