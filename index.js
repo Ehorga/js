@@ -35,4 +35,3 @@ console.dir(form);
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 });
-
