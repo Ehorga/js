@@ -1,37 +1,34 @@
 const [form] = document.forms;
-const login = form.elements.login;
+const fullname = form.elements.fullname;
+const email = form.elements.email;
+const username = form.elements.username;
 const password = form.elements.password;
-const loginPattern = /[a-z0-9_-]{3,15}$/i;
-const passwordPattern = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}/;
-const submitBtn = document.querySelector('[type="submit"]');
-submitBtn.disabled = true;
+const repeat = form.elements.repeat;
+const terms = form.elements.terms;
+const submitBtn = form.querySelector('[type="submit"]');
 
+submitBtn.disabled = true;
 let amountInput = 0;
 
-login.addEventListener('change', () => {
-    console.log(amountInput);
-    if (loginPattern.test(login.value.trim())) {
-        amountInput++;
-    }
-    if (amountInput >= 2) {
-        submitBtn.disabled = false;
-    }
-});
+function checkField(field) {
+  if (field.type === 'checkbox') {
+    if (field.checked) amountInput++;
+  } else {
+    if (field.value.trim() !== '') amountInput++;
+  }
 
-password.addEventListener('change', () => {
-    console.log(amountInput);
-    if (passwordPattern.test(password.value.trim())) {
-        amountInput++;
-    }
-    if (amountInput >= 2) {
-        submitBtn.disabled = false;
-    }
-});
+  if (amountInput >= 5) {
+    submitBtn.disabled = false;
+  }
+}
 
-submitBtn.disabled = true;
-console.dir(login);
-console.dir(form);
+fullname.addEventListener('change', () => checkField(fullname));
+email.addEventListener('change', () => checkField(email));
+username.addEventListener('change', () => checkField(username));
+password.addEventListener('change', () => checkField(password));
+repeat.addEventListener('change', () => checkField(repeat));
+terms.addEventListener('change', () => checkField(terms));
 
 form.addEventListener('submit', (event) => {
-    event.preventDefault();
+  event.preventDefault();
 });

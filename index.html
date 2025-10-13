@@ -1,19 +1,42 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Form</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="/style.css">
+  <script defer scr="./index.js"></script>
 </head>
 <body>
-  <form>
-    <input type="text" name="login" placeholder="login">
-    <input type="password" name="password" placeholder="password">
-    <button type="submit">send</button>
-    <button type="reset">clear</button>
-  </form>
+  <div class="container">
+    <div class="left"></div>
+    <div class="right">
+      <h2>Sign Up</h2>
+      <form>
+        <label>Full Name</label>
+        <input type="text" name="fullname" placeholder="Name...">
 
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email address...">
+
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Username...">
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="********">
+
+        <label>Repeat Password</label>
+        <input type="password" name="repeat" placeholder="********">
+
+        <div class="checkbox">
+          <input type="checkbox" name="terms" id="terms">
+          <label for="terms">I agree to the <b>Terms of User</b></label>
+        </div>
+
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
