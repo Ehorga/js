@@ -1,34 +1,19 @@
-const [form] = document.forms;
-const fullname = form.elements.fullname;
-const email = form.elements.email;
-const username = form.elements.username;
-const password = form.elements.password;
-const repeat = form.elements.repeat;
-const terms = form.elements.terms;
-const submitBtn = form.querySelector('[type="submit"]');
-
-submitBtn.disabled = true;
-let amountInput = 0;
-
-function checkField(field) {
-  if (field.type === 'checkbox') {
-    if (field.checked) amountInput++;
+const myPromise = new Promise((resolve, reject) => {
+  const random = Math.random();
+  if (random > 0.5) {
+    resolve('All good! random = ' + random);
   } else {
-    if (field.value.trim() !== '') amountInput++;
+    reject('Error! random = ' + random);
   }
-
-  if (amountInput >= 5) {
-    submitBtn.disabled = false;
-  }
-}
-
-fullname.addEventListener('change', () => checkField(fullname));
-email.addEventListener('change', () => checkField(email));
-username.addEventListener('change', () => checkField(username));
-password.addEventListener('change', () => checkField(password));
-repeat.addEventListener('change', () => checkField(repeat));
-terms.addEventListener('change', () => checkField(terms));
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
 });
+
+myPromise
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+  .finally(() => {
+    console.log('finally');
+  });
